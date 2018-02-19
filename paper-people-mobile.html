@@ -4,8 +4,8 @@
 <link rel="import" href="../iron-icons/hardware-icons.html">
 <link rel="import" href="../paper-item/paper-icon-item.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
-<link rel="import" href="paper-contact-behavior.html">
-<link rel="import" href="paper-contact-shared-styles.html">
+<link rel="import" href="paper-people-behavior.html">
+<link rel="import" href="paper-people-shared-styles.html">
 
 <!--
 Component for mobile contact details, that triggers the native call function for the provided number on tap.
@@ -13,15 +13,15 @@ Component for mobile contact details, that triggers the native call function for
 ### Example
 
 ```html
-<paper-contact-mobile>+1-292-613-3742</paper-contact-mobile>
+<paper-people-mobile>+1-292-613-3742</paper-people-mobile>
 ```
 
 @demo demo/index.html
 -->
-<dom-module id="paper-contact-mobile">
+<dom-module id="paper-people-mobile">
 
 	<template>
-		<style include="paper-contact-shared-styles"></style>
+		<style include="paper-people-shared-styles"></style>
 
 		<paper-icon-item class="item" on-tap="openInSameTab">
 			<paper-ripple></paper-ripple>
@@ -37,10 +37,10 @@ Component for mobile contact details, that triggers the native call function for
 (function() {
 
 	Polymer({
-		is: 'paper-contact-mobile',
+		is: 'paper-people-mobile',
 
 		behaviors: [
-			Polymer.PaperContactBehavior
+			Polymer.PaperPeopleBehavior
 		],
 
 		// Private methods

@@ -7,9 +7,9 @@
  * Contact elements can use this behavior to open a detail view on tap. The user needs to implement
  * a method _getTargetUrl() which returns the URL that is opened.
  *
- * @polymerBehavior Polymer.PaperContactBehavior
+ * @polymerBehavior Polymer.PaperPeopleBehavior
  */
-Polymer.PaperContactBehavior = {
+Polymer.PaperPeopleBehavior = {
 	/**
 	 * Opens the target URL in the same tab
 	 */
@@ -32,7 +32,7 @@ Polymer.PaperContactBehavior = {
 
 	// Private methods
 	_getContent: function(e) {
-		// Content is stored as the text content of the element, e.g. <paper-contact-email>XXX</paper-contact-email>
+		// Content is stored as the text content of the element, e.g. <paper-people-email>XXX</paper-people-email>
 		const items = Polymer.dom(this).getEffectiveChildNodes();
 		if (items.length <= 0) {
 			return null;

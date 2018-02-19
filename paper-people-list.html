@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="paper-contact.html">
+<link rel="import" href="paper-people.html">
 
 <!--
 Component for encapsulating and styling lists of contact details.
@@ -8,17 +8,17 @@ Component for encapsulating and styling lists of contact details.
 ### Example
 
 ```html
-<paper-contact-list>
-	<paper-contact-email>email@example.com</paper-contact-email>
-	<paper-contact-email>email@example.com</paper-contact-email>
-	<paper-contact-address latitude="51.5287718" longitude="-0.2416798">London</paper-contact-address>
-</paper-contact-list>
+<paper-people-list>
+	<paper-people-email>email@example.com</paper-people-email>
+	<paper-people-email>email@example.com</paper-people-email>
+	<paper-people-address latitude="51.5287718" longitude="-0.2416798">London</paper-people-address>
+</paper-people-list>
 ```
 
 @demo demo/index.html
 -->
 
-<dom-module id="paper-contact-list">
+<dom-module id="paper-people-list">
 
 	<template>
 
@@ -54,7 +54,7 @@ Component for encapsulating and styling lists of contact details.
 	(function() {
 
 		Polymer({
-			is: 'paper-contact-list'
+			is: 'paper-people-list'
 		});
 
 	})();

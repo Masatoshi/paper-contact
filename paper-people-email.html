@@ -4,28 +4,28 @@
 <link rel="import" href="../iron-icons/communication-icons.html">
 <link rel="import" href="../paper-item/paper-icon-item.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
-<link rel="import" href="paper-contact-behavior.html">
-<link rel="import" href="paper-contact-shared-styles.html">
+<link rel="import" href="paper-people-behavior.html">
+<link rel="import" href="paper-people-shared-styles.html">
 
 <!--
-Component for generic phone contact details, that triggers the native call function for the provided number on tap. Shows a different icon that the more specific "mobile" component.
+Component for email contact details, that triggers the opening of the email client on tap.
 
 ### Example
 
 ```html
-<paper-contact-phone>+1-873-217-3442</paper-contact-phone>
+<paper-people-email>email@example.com</paper-people-email>
 ```
 
 @demo demo/index.html
 -->
-<dom-module id="paper-contact-phone">
+<dom-module id="paper-people-email">
 
 	<template>
-		<style include="paper-contact-shared-styles"></style>
+		<style include="paper-people-shared-styles"></style>
 
 		<paper-icon-item class="item" on-tap="openInSameTab">
 			<paper-ripple></paper-ripple>
-			<iron-icon class="icon" icon="communication:phone" slot="item-icon"></iron-icon>
+			<iron-icon class="icon" icon="communication:email" slot="item-icon"></iron-icon>
 			<div class="text"><slot></slot></div>
 		</paper-icon-item>
 	</template>
@@ -35,15 +35,15 @@ Component for generic phone contact details, that triggers the native call funct
 <script>
 (function() {
 	Polymer({
-		is: 'paper-contact-phone',
+		is: 'paper-people-email',
 
 		behaviors: [
-			Polymer.PaperContactBehavior
+			Polymer.PaperPeopleBehavior
 		],
 
 		// Private methods
 		_getTargetUrl: function(content) {
-			return 'tel:' + content;
+			return 'mailto:' + encodeURIComponent(content);
 		}
 	});
 })();
